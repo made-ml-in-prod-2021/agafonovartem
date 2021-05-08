@@ -1,0 +1,33 @@
+input_data_path: "data/raw/heart.csv"
+output_model_path: "models/model.pkl"
+output_transformer_path: "transformers/transformer.pkl"
+metric_path: "models/metrics.json"
+validation_params:
+  val_name: "TrainTestSplit"
+  random_state: 52
+  test_size: 0.2
+model_params:
+  name: "LogisticRegression"
+  params:
+    penalty: "l2"
+    C: 3.5
+    max_iter: 1000000
+    solver: "liblinear"
+feature_params:
+  categorical_features:
+    - "sex"
+    - "cp"
+    - "fbs"
+    - "restecg"
+    - "exang"
+  numerical_features:
+    - "age"
+    - "trestbps"
+    - "chol"
+    - "thalach"
+    - "oldpeak"
+  target_col: "target"
+  numerical_transformers:
+    - name: "StandardScaler"
+    - name: "PCA"
+      n_components: 1

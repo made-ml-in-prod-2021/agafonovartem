@@ -1,0 +1,5 @@
+mode: "Test"
+input_data_path: "data/raw/heart.csv"
+input_model_path: "models/model.pkl"
+input_transformer_path: "transformers/transformer.pkl"
+output_predictions_path: "predictions/predictions.csv"

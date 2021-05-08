@@ -1,0 +1,51 @@
+mode: "Train"
+input_data_path: "tests/original_dataset_sample.csv"
+output_model_path: "output.pth"
+metric_path: "metric.txt"
+validation_params:
+  val_name: "KFoldCrossValidation"
+  random_state: 10
+  n_splits: 7
+  shuffle: True
+feature_params:
+  categorical_features:
+    - "MSZoning"
+    - "Neighborhood"
+    - "RoofStyle"
+    - "MasVnrType"
+    - "BsmtQual"
+    - "BsmtExposure"
+    - "HeatingQC"
+    - "CentralAir"
+    - "KitchenQual"
+    - "FireplaceQu"
+    - "GarageType"
+    - "GarageFinish"
+    - "PavedDrive"
+  numerical_features:
+    - "OverallQual"
+    - "MSSubClass"
+    - "OverallCond"
+    - "GrLivArea"
+    - "GarageCars"
+    - "1stFlrSF"
+    - "Fireplaces"
+    - "BsmtFullBath"
+    - "YrSold"
+    - "YearRemodAdd"
+    - "LotFrontage"
+  features_to_drop:
+    - "YrSold"
+  target_col: "SalePrice"
+  numerical_transformers:
+    - name: "StandardScaler"
+    - name: "PCA"
+      n_components: 6
+    - name: "PCA"
+model_params:
+  name: "LogisticRegression"
+  params:
+    penalty: "l2"
+    C: 3.5
+    random_state: 52
+    solver: "liblinear"

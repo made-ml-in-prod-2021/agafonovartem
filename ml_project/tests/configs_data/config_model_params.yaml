@@ -1,0 +1,7 @@
+model_params:
+  name: "LogisticRegression"
+  params:
+    penalty: "l2"
+    C: 3.5
+    random_state: 52
+    solver: "liblinear"

@@ -1,0 +1,4 @@
+validation_params:
+  val_name: "TrainTestSplit"
+  random_state: 10
+  test_size: 0.5
