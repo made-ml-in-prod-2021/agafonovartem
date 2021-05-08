@@ -15,8 +15,11 @@ Training
 
 ```
 python src/train_pipeline.py configs/config_train_tree_k_fold_cv.yaml
+```
+```
 python src/train_pipeline.py configs/config_train_logreg_train_test_split.yaml
 ```
+
 Make prediction
 
 ```
