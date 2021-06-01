@@ -1,0 +1,5 @@
+validation_params:
+  val_name: "KFoldCrossValidation"
+  random_state: 10
+  n_splits: 7
+  shuffle: True

@@ -1,0 +1,5 @@
+mode: "Test"
+input_data_path: "tests/original_dataset_sample.csv"
+input_model_path: "input_model.pth"
+input_transformer_path: "input_transformer.pth"
+output_predictions_path: "output_predictions_path.txt"

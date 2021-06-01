@@ -1,0 +1,26 @@
+input_data_path: "data/raw/heart.csv"
+output_model_path: "models/tree.pkl"
+output_transformer_path: "transformers/transformer.pkl"
+metric_path: "models/tree_metrics.json"
+validation_params:
+  val_name: "KFoldCrossValidation"
+  random_state: 10
+  n_splits: 5
+  shuffle: True
+model_params:
+  name: "DecisionTree"
+feature_params:
+  categorical_features:
+    - "sex"
+    - "cp"
+    - "fbs"
+    - "restecg"
+    - "exang"
+  numerical_features:
+    - "age"
+    - "trestbps"
+    - "chol"
+    - "thalach"
+    - "oldpeak"
+  target_col: "target"
+
