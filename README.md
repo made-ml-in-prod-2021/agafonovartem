@@ -1,2 +1,8 @@
-# agafonovartem
-Repo for MADE course "ML in prod"
+### Airflow ml dags
+~~~
+docker compose up --build
+~~~
+Tests
+~~~
+pytest tests
+~~~
