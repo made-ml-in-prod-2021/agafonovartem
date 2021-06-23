@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fastapi-ml-replicas
+  labels:
+    app: fastapi-ml-replicas
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fastapi-ml-replicas
+  template:
+    metadata:
+      name: fastapi-ml-replicas
+      labels:
+        app: fastapi-ml-replicas
+    spec:
+      containers:
+        - image: fiztehno/online_inference:v2
+          name: fastapi-ml-replicas
+          ports:
+            - containerPort: 8000
+
+
+
+
